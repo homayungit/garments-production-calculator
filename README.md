@@ -1,4 +1,4 @@
-# 🧵 OCS Garments Production Calculator Suite
+# 🧵 Garments Production Calculator Suite
 
 > **16 professional production calculators** in one fast, beautiful web app — built for the garments & apparel industry. Works on any device, supports Bangla & English, includes dark mode, and is fully APK-ready.
 
