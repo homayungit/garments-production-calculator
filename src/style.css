@@ -1,0 +1,77 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * { box-sizing: border-box; }
+  html { @apply antialiased; }
+  body { @apply bg-gray-50 dark:bg-slate-950 text-gray-800 dark:text-slate-100 transition-colors duration-200; -webkit-tap-highlight-color: transparent; }
+  input[type=number]::-webkit-inner-spin-button,
+  input[type=number]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+  input[type=number] { -moz-appearance: textfield; }
+}
+
+@layer components {
+  .calc-input {
+    @apply w-full px-3 py-2.5 border border-gray-200 dark:border-slate-600 rounded-lg text-sm
+           focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500
+           bg-white dark:bg-slate-800 dark:text-slate-100 dark:placeholder-slate-500
+           transition-colors duration-150;
+  }
+  .calc-label {
+    @apply block text-sm font-medium text-gray-700 dark:text-slate-300 mb-1;
+  }
+  .calc-hint {
+    @apply text-xs text-gray-400 dark:text-slate-500 mt-1;
+  }
+  .calc-btn {
+    @apply w-full bg-primary-600 hover:bg-primary-700 active:bg-primary-800 text-white
+           font-semibold py-2.5 px-6 rounded-lg transition-colors duration-150 text-sm shadow-sm;
+  }
+  .calc-btn-secondary {
+    @apply w-full bg-gray-100 dark:bg-slate-700 hover:bg-gray-200 dark:hover:bg-slate-600
+           text-gray-700 dark:text-slate-200 font-semibold py-2.5 px-6 rounded-lg
+           transition-colors duration-150 text-sm border border-gray-200 dark:border-slate-600;
+  }
+  .result-box {
+    @apply bg-primary-50 dark:bg-primary-900/20 border border-primary-200 dark:border-primary-800 rounded-xl p-4 mt-3;
+  }
+  .result-value {
+    @apply text-3xl font-bold text-primary-700 dark:text-primary-400;
+  }
+  .result-label {
+    @apply text-xs text-primary-600 dark:text-primary-500 mt-1;
+  }
+  .result-card {
+    @apply bg-gray-50 dark:bg-slate-700/50 border border-gray-200 dark:border-slate-600 rounded-xl p-3 text-center;
+  }
+  .result-card-value {
+    @apply text-xl font-bold text-gray-700 dark:text-slate-200;
+  }
+  .result-card-label {
+    @apply text-xs text-gray-500 dark:text-slate-400 mt-0.5;
+  }
+  .section-card {
+    @apply bg-white dark:bg-slate-800/80 rounded-xl shadow-sm border border-gray-100 dark:border-slate-700 p-4;
+  }
+  .section-title {
+    @apply text-xs font-bold text-gray-400 dark:text-slate-500 uppercase tracking-widest mb-3;
+  }
+  .page-title {
+    @apply text-xl font-bold text-gray-900 dark:text-slate-50;
+  }
+  .page-subtitle {
+    @apply text-sm text-gray-500 dark:text-slate-400 mt-1 leading-relaxed;
+  }
+  .formula-box {
+    @apply bg-gray-50 dark:bg-slate-900/50 border border-gray-200 dark:border-slate-700
+           rounded-lg p-3 text-xs text-gray-500 dark:text-slate-400 font-mono mt-3 leading-relaxed;
+  }
+  .error-box {
+    @apply bg-red-50 dark:bg-red-900/20 border border-red-200 dark:border-red-800
+           rounded-xl p-3 text-red-700 dark:text-red-400 text-sm;
+  }
+  .progress-bar-wrap {
+    @apply w-full bg-gray-200 dark:bg-slate-700 rounded-full h-2.5 mt-3;
+  }
+}
